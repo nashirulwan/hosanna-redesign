@@ -1,0 +1,10 @@
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.thumbnail
+*.swp
+.idea/
+.vscode/
+
+# Node (only if a tooling setup is added later)
+node_modules/

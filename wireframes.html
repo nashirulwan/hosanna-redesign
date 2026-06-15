@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Hosanna Afghan Hounds — wireframes</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Architects+Daughter&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  html, body { margin: 0; padding: 0; height: 100%; background: #efece6; font-family: 'Architects Daughter', system-ui, sans-serif; }
+  #root { width: 100%; height: 100%; }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="wireframes/design-canvas.jsx"></script>
+<script type="text/babel" src="wireframes/sketch.jsx"></script>
+<script type="text/babel" src="wireframes/home-variants.jsx"></script>
+<script type="text/babel" src="wireframes/page-variants.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+const { useState } = React;
+
+// ---------- intro card ----------
+const Intro = () => (
+  <div style={{
+    width: 760, padding: 28, background: SK.paper,
+    border: `1.5px solid ${SK.ink}`, borderRadius: 12,
+    boxShadow: '5px 5px 0 ' + SK.ink, fontFamily: SK.hand2, color: SK.ink
+  }}>
+    <HP size={11}>round 1 · wireframes · low-fi</HP>
+    <div style={{ marginTop: 4 }}>
+      <HW size={42} style={{ lineHeight: 1.05 }}>Hosanna Afghan Hounds — redesign</HW>
+      <Underline w={220} />
+    </div>
+    <div style={{ marginTop: 14, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 18 }}>
+      <div>
+        <HP>The brief, in one breath</HP>
+        <p style={{ fontFamily: SK.hand, fontSize: 18, lineHeight: 1.25, color: SK.ink, margin: '4px 0 0' }}>
+          A small family kennel needs a calm, trustworthy site where buyers can see available
+          puppies, learn pedigree, and get in touch. Less is much more.
+        </p>
+      </div>
+      <div>
+        <HP>How to use this</HP>
+        <p style={{ fontFamily: SK.hand, fontSize: 18, lineHeight: 1.25, color: SK.ink, margin: '4px 0 0' }}>
+          Each row below is a page. Variants sit side-by-side — drag to reorder, click any
+          artboard to focus. Tell me which direction feels right and I'll move that one to hi-fi.
+        </p>
+      </div>
+    </div>
+    <div style={{ marginTop: 18, display: 'flex', gap: 18, flexWrap: 'wrap' }}>
+      <span><HP>palette</HP>
+        <div style={{ display: 'flex', gap: 6, marginTop: 4 }}>
+          {['#1a1814', '#c9844c', '#fbf7ed', '#f3eddc'].map(c => (
+            <span key={c} style={{ width: 28, height: 28, background: c, border: `1.5px solid ${SK.ink}`, borderRadius: 6 }} />
+          ))}
+        </div>
+      </span>
+      <span><HP>type pairing</HP>
+        <div style={{ marginTop: 4 }}>
+          <span style={{ fontFamily: 'Caveat', fontSize: 26 }}>Caveat</span>
+          <span style={{ fontFamily: 'Architects Daughter', marginLeft: 12, fontSize: 14 }}>+ Architects Daughter</span>
+        </div>
+        <HP size={9} style={{ display: 'block', marginTop: 2 }}>(hi-fi will swap to Playfair + Inter as spec'd)</HP>
+      </span>
+      <span><HP>assumptions</HP>
+        <ul style={{ fontFamily: SK.hand, fontSize: 16, margin: '4px 0 0 18px', padding: 0, lineHeight: 1.2 }}>
+          <li>real dog photos go in placeholder slots</li>
+          <li>5-item nav · sticky on scroll</li>
+          <li>2-step inquiry (form → review → send)</li>
+        </ul>
+      </span>
+    </div>
+  </div>
+);
+
+// ---------- token swatch card ----------
+const Tokens = () => (
+  <div style={{ width: 760, padding: 22, background: SK.paper, border: `1.5px solid ${SK.ink}`, borderRadius: 10 }}>
+    <HW size={26}>Design tokens (rough)</HW>
+    <Underline w={120} />
+    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: 18, marginTop: 14 }}>
+      <div>
+        <HP>color</HP>
+        {[
+          ['ink', '#1A1A1A'], ['navy', '#1B2B4B'], ['gold', '#C9A84C'],
+          ['off-white', '#FAFAF7'], ['white', '#FFFFFF']
+        ].map(([n, c]) => (
+          <div key={n} style={{ display: 'flex', alignItems: 'center', gap: 6, marginTop: 4 }}>
+            <span style={{ width: 16, height: 16, background: c, border: `1px solid ${SK.ink}`, borderRadius: 3 }} />
+            <span style={{ fontFamily: SK.mono, fontSize: 10 }}>{n}</span>
+            <span style={{ fontFamily: SK.mono, fontSize: 9, color: SK.inkSoft, marginLeft: 'auto' }}>{c}</span>
+          </div>
+        ))}
+      </div>
+      <div>
+        <HP>type scale</HP>
+        <div style={{ marginTop: 6, lineHeight: 1.1 }}>
+          <div style={{ fontFamily: 'Caveat', fontSize: 28 }}>Display 56</div>
+          <div style={{ fontFamily: 'Caveat', fontSize: 22 }}>H1 40</div>
+          <div style={{ fontFamily: 'Caveat', fontSize: 18 }}>H2 28</div>
+          <div style={{ fontFamily: 'Architects Daughter', fontSize: 12 }}>Body 16/24</div>
+          <div style={{ fontFamily: 'Architects Daughter', fontSize: 10, letterSpacing: 1, textTransform: 'uppercase' }}>Caps 12</div>
+        </div>
+      </div>
+      <div>
+        <HP>spacing</HP>
+        <div style={{ marginTop: 6, display: 'flex', flexDirection: 'column', gap: 4 }}>
+          {[4, 8, 16, 24, 48].map(s => (
+            <div key={s} style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
+              <span style={{ width: s, height: 8, background: SK.accent }} />
+              <span style={{ fontFamily: SK.mono, fontSize: 10 }}>{s}px</span>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div>
+        <HP>components</HP>
+        <div style={{ marginTop: 6, display: 'flex', flexDirection: 'column', gap: 6 }}>
+          <Btn size="sm" primary>Primary →</Btn>
+          <Btn size="sm" dashed>Secondary</Btn>
+          <div style={{ display: 'flex', gap: 4 }}><Chip accent>show</Chip><Chip active>available</Chip></div>
+          <Box style={{ padding: '4px 8px' }}><HP size={9}>input field</HP></Box>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+// ---------- nav exploration card ----------
+const NavExplore = () => (
+  <div style={{ width: 700, padding: 18, background: SK.paper, border: `1.5px dashed ${SK.ink}`, borderRadius: 10 }}>
+    <HW size={22}>Nav exploration · pick one</HW>
+    <Underline w={100} />
+    <div style={{ marginTop: 12, display: 'flex', flexDirection: 'column', gap: 10 }}>
+      {[
+        { label: 'A · clean horizontal', items: ['Dogs', 'Litters', 'About', 'Contact'], cta: 'Inquire', logo: 'Hosanna' },
+        { label: 'B · centered logo', items: ['Dogs', 'Litters', 'About', 'Contact'], cta: 'Inquire', logo: '— Hosanna —' },
+        { label: 'C · all-caps wordmark', items: ['DOGS', 'LITTERS', 'ABOUT', 'CONTACT'], cta: 'Inquire →', logo: 'HOSANNA' },
+      ].map((n, i) => (
+        <div key={i}>
+          <HP size={10}>{n.label}</HP>
+          <div style={{ marginTop: 4, border: `1.5px solid ${SK.ink}`, borderRadius: 6, overflow: 'hidden' }}>
+            <NavBar items={n.items} cta={n.cta} logo={n.logo} />
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+);
+
+// ---------- main canvas ----------
+const App = () => (
+  <DesignCanvas initialZoom={0.55}>
+    <DCSection id="intro" title="Hosanna · redesign" subtitle="Low-fi wireframes — pick what to push to hi-fi">
+      <DCArtboard id="brief" label="The brief" width={760} height={420}><Intro /></DCArtboard>
+      <DCArtboard id="tokens" label="Tokens" width={760} height={300}><Tokens /></DCArtboard>
+      <DCArtboard id="nav" label="Nav options" width={700} height={420}><NavExplore /></DCArtboard>
+    </DCSection>
+
+    <DCSection id="home" title="01 · Homepage" subtitle="Four directions. Same content, very different posture.">
+      <DCArtboard id="home-a" label="A · Editorial" width={1280} height={900}><HomeA_Editorial /></DCArtboard>
+      <DCArtboard id="home-b" label="B · Photo mosaic" width={1280} height={900}><HomeB_Mosaic /></DCArtboard>
+      <DCArtboard id="home-c" label="C · Story split" width={1280} height={900}><HomeC_StorySplit /></DCArtboard>
+      <DCArtboard id="home-d" label="D · Bold type" width={1280} height={900}><HomeD_BoldType /></DCArtboard>
+    </DCSection>
+
+    <DCSection id="dogs" title="02 · Available Dogs" subtitle="Filtered grid + the empty-state moment">
+      <DCArtboard id="dogs-a" label="A · Filtered grid" width={1280} height={900}><DogsA_Filtered /></DCArtboard>
+      <DCArtboard id="dogs-b" label="B · Empty + waitlist" width={1280} height={900}><DogsB_Empty /></DCArtboard>
+    </DCSection>
+
+    <DCSection id="profile" title="03 · Dog Profile" subtitle="The page that does the selling">
+      <DCArtboard id="prof-a" label="A · Two-column classic" width={1280} height={900}><ProfileA_Classic /></DCArtboard>
+      <DCArtboard id="prof-b" label="B · Editorial full-bleed" width={1280} height={900}><ProfileB_Editorial /></DCArtboard>
+    </DCSection>
+
+    <DCSection id="contact" title="04 · Contact + Inquiry" subtitle="Plus the protective 'confirm before send' step">
+      <DCArtboard id="contact-a" label="A · Form + kennel info" width={1280} height={900}><ContactA_Form /></DCArtboard>
+      <DCArtboard id="contact-b" label="B · Review step" width={1280} height={900}><ContactB_Summary /></DCArtboard>
+    </DCSection>
+
+    <DCSection id="mobile" title="05 · Mobile (375)" subtitle="Same four pages — phone-first sanity check">
+      <DCArtboard id="m-home" label="Home" width={375} height={720}><MobHome /></DCArtboard>
+      <DCArtboard id="m-dogs" label="Dogs" width={375} height={720}><MobDogs /></DCArtboard>
+      <DCArtboard id="m-prof" label="Profile" width={375} height={720}><MobProfile /></DCArtboard>
+      <DCArtboard id="m-contact" label="Contact" width={375} height={720}><MobContact /></DCArtboard>
+    </DCSection>
+  </DesignCanvas>
+);
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

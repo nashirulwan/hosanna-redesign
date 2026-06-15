@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Hosanna Afghan Hounds — Hi-Fi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="hi-fi/styles.css" />
+<link rel="stylesheet" href="hi-fi/responsive.css" />
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<template id="__bundler_thumbnail" data-bg-color="#FAFAF7">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <!-- Navy header bar -->
+    <rect x="0" y="0" width="1200" height="80" fill="#1B2B4B"/>
+    <text x="60" y="52" font-family="Georgia,serif" font-size="32" fill="white" font-weight="500">Hosanna</text>
+    <text x="170" y="52" font-family="Arial,sans-serif" font-size="13" fill="rgba(255,255,255,0.55)" letter-spacing="3">AFGHAN HOUNDS</text>
+    <!-- nav items -->
+    <text x="700" y="50" font-family="Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">Dogs</text>
+    <text x="780" y="50" font-family="Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">Litters</text>
+    <text x="870" y="50" font-family="Arial,sans-serif" font-size="14" fill="rgba(255,255,255,0.7)">About</text>
+    <rect x="960" y="26" width="110" height="38" rx="19" fill="#C9A84C"/>
+    <text x="1015" y="51" font-family="Arial,sans-serif" font-size="14" fill="#1B2B4B" font-weight="600" text-anchor="middle">Inquire →</text>
+    <!-- Hero photo placeholder -->
+    <rect x="0" y="80" width="1200" height="460" fill="#E9DFC8"/>
+    <line x1="0" y1="80" x2="1200" y2="540" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <line x1="1200" y1="80" x2="0" y2="540" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+    <!-- Hero text overlay card -->
+    <rect x="60" y="240" width="500" height="200" rx="10" fill="white" opacity="0.95"/>
+    <text x="90" y="290" font-family="Georgia,serif" font-size="34" fill="#1B2B4B" font-weight="600">Champion Afghan</text>
+    <text x="90" y="336" font-family="Georgia,serif" font-size="34" fill="#C9A84C" font-style="italic">Hound Puppies</text>
+    <rect x="90" y="358" width="180" height="3" rx="2" fill="#C9A84C"/>
+    <rect x="90" y="388" width="160" height="36" rx="18" fill="#1B2B4B"/>
+    <text x="170" y="412" font-family="Arial,sans-serif" font-size="14" fill="white" text-anchor="middle">View Available →</text>
+    <!-- Card grid -->
+    <rect x="60" y="576" width="340" height="200" rx="10" fill="white" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.08))"/>
+    <rect x="60" y="576" width="340" height="110" rx="10" fill="#D8C9A8"/>
+    <text x="80" y="716" font-family="Georgia,serif" font-size="20" fill="#1B2B4B">"Bliss"</text>
+    <rect x="430" y="576" width="340" height="200" rx="10" fill="white" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.08))"/>
+    <rect x="430" y="576" width="340" height="110" rx="10" fill="#B8C9A8"/>
+    <text x="450" y="716" font-family="Georgia,serif" font-size="20" fill="#1B2B4B">"Samson"</text>
+    <rect x="800" y="576" width="340" height="200" rx="10" fill="white" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.08))"/>
+    <rect x="800" y="576" width="340" height="110" rx="10" fill="#C9A8A8"/>
+    <text x="820" y="716" font-family="Georgia,serif" font-size="20" fill="#1B2B4B">"Ruby"</text>
+  </svg>
+</template>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="hi-fi/data.js"></script>
+<script type="text/babel" data-presets="react" src="hi-fi/components.jsx"></script>
+<script type="text/babel" data-presets="react" src="hi-fi/page-home.jsx"></script>
+<script type="text/babel" data-presets="react" src="hi-fi/page-dogs.jsx"></script>
+<script type="text/babel" data-presets="react" src="hi-fi/page-profile.jsx"></script>
+<script type="text/babel" data-presets="react" src="hi-fi/page-contact.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+const { useState, useEffect } = React;
+
+const App = () => {
+  // route format: { page: 'home'|'dogs'|'profile'|'contact'|'litters'|'about', dog?: {...}, preselectDog?: 'id' }
+  const [route, setRoute] = useState({ page: 'home' });
+
+  // scroll to top when route changes
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }); }, [route.page, route.dog?.id]);
+
+  const navigate = (page) => setRoute({ page });
+  const openDog = (dog) => setRoute({ page: 'profile', dog });
+  const inquireFor = (dogId) => setRoute({ page: 'contact', preselectDog: dogId });
+
+  let pageEl;
+  switch (route.page) {
+    case 'dogs':    pageEl = <DogsPage onOpenDog={openDog} />; break;
+    case 'profile': pageEl = <ProfilePage dog={route.dog} onNavigate={navigate} onOpenDog={openDog} />; break;
+    case 'contact': pageEl = <ContactPage preselectDog={route.preselectDog} />; break;
+    case 'litters': pageEl = <PlaceholderPage title="Litters & Archive" body="A record of Hosanna litters from 1998 to today." />; break;
+    case 'about':   pageEl = <PlaceholderPage title="About the Kennel" body="The Farley family · the people behind Hosanna." />; break;
+    default:        pageEl = <HomePage onNavigate={navigate} onOpenDog={openDog} />;
+  }
+
+  return (
+    <>
+      <Nav current={route.page} onNavigate={navigate} />
+      <div key={route.page + (route.dog?.id || '')}>{pageEl}</div>
+      <Footer onNavigate={navigate} />
+      {/* sticky mobile CTA — only on non-contact pages */}
+      {route.page !== 'contact' && (
+        <div className="sticky-cta">
+          <button className="btn btn-gold btn-lg" onClick={() => navigate('contact')}>
+            Contact us <Icon name="arrow" />
+          </button>
+        </div>
+      )}
+    </>
+  );
+};
+
+const PlaceholderPage = ({ title, body }) => (
+  <main className="page-enter">
+    <section className="section" style={{ minHeight: '60vh' }}>
+      <div className="container">
+        <div className="eyebrow">Coming soon</div>
+        <h1 style={{ marginTop: 10 }}>{title}</h1>
+        <p className="lede" style={{ marginTop: 16, maxWidth: 560 }}>{body}</p>
+        <p className="muted" style={{ marginTop: 24, fontSize: 14 }}>
+          This page is part of the redesign but not yet detailed — let me know if you'd like it next.
+        </p>
+      </div>
+    </section>
+  </main>
+);
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+</body>
+</html>

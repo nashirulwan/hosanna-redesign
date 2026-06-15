@@ -1,0 +1,78 @@
+/* Responsive overrides + tweak-specific style hooks */
+
+/* photo nav buttons on profile hero */
+.photo-nav {
+  width: 44px; height: 44px;
+  border-radius: 99px;
+  background: rgba(255,255,255,0.92);
+  border: none;
+  color: var(--navy);
+  cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: var(--sh-2);
+  transition: background .15s ease, transform .15s ease;
+}
+.photo-nav:hover { background: white; transform: scale(1.05); }
+
+/* dog grid */
+@media (max-width: 1080px) {
+  .dog-grid { grid-template-columns: repeat(2, 1fr) !important; }
+}
+@media (max-width: 640px) {
+  .dog-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+}
+
+/* profile + contact grids stack on smaller screens */
+@media (max-width: 1080px) {
+  .profile-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .contact-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+}
+
+/* home hero stacks */
+@media (max-width: 980px) {
+  .home-hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .home-hero-grid > div:last-child { min-height: 420px !important; }
+}
+
+/* latest-litter section stacks */
+@media (max-width: 880px) {
+  .litter-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+}
+
+/* trust strip stacks */
+@media (max-width: 720px) {
+  .trust-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
+}
+
+/* hero typography scales down a touch on mobile */
+@media (max-width: 640px) {
+  h1 { font-size: 40px !important; }
+  h2 { font-size: 28px !important; }
+}
+
+/* profile fact grid wraps */
+@media (max-width: 880px) {
+  .profile-facts { grid-template-columns: repeat(2, 1fr) !important; gap: 18px !important; }
+}
+
+/* contact form responsive */
+@media (max-width: 600px) {
+  .contact-form-pair { grid-template-columns: 1fr !important; }
+}
+
+/* input focus state */
+input:focus, select:focus, textarea:focus {
+  border-color: var(--navy) !important;
+  box-shadow: 0 0 0 3px rgba(27, 43, 75, 0.12);
+}
+
+/* select arrow alignment fix on Safari */
+select { background-color: white; }
+
+/* leave footroom for sticky CTA on mobile */
+@media (max-width: 768px) {
+  body { padding-bottom: 80px; }
+}
+
+/* scrollbar polish */
+html { scroll-behavior: smooth; }

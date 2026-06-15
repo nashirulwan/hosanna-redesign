@@ -12,13 +12,15 @@ to a high-fidelity, interactive prototype.
 
 Designed & built by [**@nashirulwan**](https://github.com/nashirulwan).
 
+🔗 **Live demo:** https://nashirulwan.github.io/hosanna-redesign/
+
 ---
 
 ## Before → After
 
 | Original (1998-era) | Redesign concept |
 | --- | --- |
-| ![Original site](docs/before-original-site.png) | _Run locally — see below — or view the live demo._ |
+| ![Original site](docs/before-original-site.png) | [**View the live demo →**](https://nashirulwan.github.io/hosanna-redesign/)<br>_(screenshot: `docs/after-redesign.png`)_ |
 
 ---
 

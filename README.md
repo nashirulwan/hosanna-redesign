@@ -14,19 +14,51 @@ This redesign is based on an analysis of **17 UI/UX principles** and includes:
 > references remain the property of their owner. The original site lives at
 > [hosanna1.com](https://hosanna1.com).
 
-🔗 **Live demo:** https://nashirulwan.github.io/hosanna-redesign/
-
 ---
 
 ## Before → After
 
-| Original (1998-era) | Redesign concept |
+| Original | Redesign concept |
 | --- | --- |
-| ![Original site](docs/before-original-site.png) | ![Redesign](docs/after-redesign.png) |
+| <img src="docs/before-original-site.png" width="400"> | <img src="docs/after-redesign.png" width="400"> |
 
 > See the [live demo](https://nashirulwan.github.io/hosanna-redesign/) or check `docs/after-redesign.png`.
 
 ---
+## Wireframes
+
+The redesign started with low-fidelity wireframes to explore multiple layout directions before committing to a final design.
+
+### Design Exploration
+
+| The Brief | Design Tokens | Nav Options |
+| --- | --- | --- |
+| <img src="docs/wireframe-full.jpg" width="400"> | <img src="docs/wireframe-homepage.jpg" width="400"> | |
+
+### Homepage Directions (4 Concepts)
+
+| A - Editorial | B - Photo Mosaic | C - Story Split | D - Bold Type |
+| --- | --- | --- | --- |
+| Classic magazine layout with hero text, stats, and news grid. | Image-focused with mosaic grid and visual storytelling. | Split-column with large headline and intimate text/image balance. | Typography-first with bold script and minimal placeholders. |
+
+> Each direction uses the same content but with a very different visual posture — from editorial to photo-driven to type-focused.
+
+### Available Dogs & Dog Profile
+
+| Available Dogs | Dog Profile |
+| --- | --- |
+| <img src="docs/wireframe-dogs-profile.jpg" width="400"> | |
+
+> Filterable grid for browsing dogs, empty state with waitlist, and two profile layout options — structured two-column vs full-bleed editorial.
+
+### Contact & Mobile
+
+| Contact Flow | Mobile (375px) |
+| --- | --- |
+| <img src="docs/wireframe-contact-mobile.jpg" width="400"> | |
+
+> Contact flow with form + confirmation step, and mobile-first sanity check across all 4 main pages.
+
 
 ## What's in here
 

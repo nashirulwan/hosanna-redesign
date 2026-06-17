@@ -18,47 +18,51 @@ This redesign is based on an analysis of **17 UI/UX principles** and includes:
 
 ## Before → After
 
-| Original | Redesign concept |
+| Original (1998-era) | Redesign concept |
 | --- | --- |
-| <img src="docs/before-original-site.png" width="400"> | <img src="docs/after-redesign.png" width="400"> |
+| <img src="docs/before-original-site.png" width="400"> | <img src="docs/Home.png" width="400"> |
 
-> See the [live demo](https://nashirulwan.github.io/hosanna-redesign/) or check `docs/after-redesign.png`.
+> See the [live demo](https://nashirulwan.github.io/hosanna-redesign/) for the full interactive experience.
 
 ---
+
 ## Wireframes
 
 The redesign started with low-fidelity wireframes to explore multiple layout directions before committing to a final design.
-
-### Design Exploration
-
-| The Brief | Design Tokens | Nav Options |
-| --- | --- | --- |
-| <img src="docs/wireframe-full.jpg" width="400"> | <img src="docs/wireframe-homepage.jpg" width="400"> | |
 
 ### Homepage Directions (4 Concepts)
 
 | A - Editorial | B - Photo Mosaic | C - Story Split | D - Bold Type |
 | --- | --- | --- | --- |
-| Classic magazine layout with hero text, stats, and news grid. | Image-focused with mosaic grid and visual storytelling. | Split-column with large headline and intimate text/image balance. | Typography-first with bold script and minimal placeholders. |
+| <img src="docs/A _ Editorial.png" width="400"> | <img src="docs/B _ Photo mosaic.png" width="400"> | <img src="docs/C _ Story split.png" width="400"> | <img src="docs/D _ Bold type.png" width="400"> |
 
 > Each direction uses the same content but with a very different visual posture — from editorial to photo-driven to type-focused.
 
-### Available Dogs & Dog Profile
+### Available Dogs
 
-| Available Dogs | Dog Profile |
+| A - Filtered Grid | B - Empty + Waitlist |
 | --- | --- |
-| <img src="docs/wireframe-dogs-profile.jpg" width="400"> | |
+| <img src="docs/A _ Filtered grid.png" width="400"> | <img src="docs/B _ Empty _ waitlist.png" width="400"> |
 
-> Filterable grid for browsing dogs, empty state with waitlist, and two profile layout options — structured two-column vs full-bleed editorial.
+> Filterable grid for browsing dogs, plus empty state with waitlist signup.
 
-### Contact & Mobile
+### Dog Profile
 
-| Contact Flow | Mobile (375px) |
+| A - Two-Column Classic | B - Editorial Full-Bleed |
 | --- | --- |
-| <img src="docs/wireframe-contact-mobile.jpg" width="400"> | |
+| <img src="docs/A _ Two-column classic.png" width="400"> | <img src="docs/B _ Editorial full-bleed.png" width="400"> |
 
-> Contact flow with form + confirmation step, and mobile-first sanity check across all 4 main pages.
+> Two layout options: structured two-column vs full-bleed editorial.
 
+### Contact
+
+| A - Form + Kennel Info | B - Review Step |
+| --- | --- |
+| <img src="docs/A _ Form _ kennel info.png" width="400"> | <img src="docs/B _ Review step.png" width="400"> |
+
+> Contact flow with form + confirmation step before sending.
+
+---
 
 ## What's in here
 
@@ -68,51 +72,58 @@ The redesign started with low-fidelity wireframes to explore multiple layout dir
 | **Wireframes** | [`wireframes.html`](wireframes.html) | Low-fidelity exploration: layout directions, design tokens, mobile sketches. |
 | Hi-fi source | `hi-fi/` | Components, page code, CSS design tokens, sample data. |
 | Wireframe source | `wireframes/` | The sketch-style component library and page variants. |
-| Reference | `docs/` | Screenshot of the original site. |
+| Reference | `docs/` | Screenshots of the original site, wireframes, and hi-fi redesign. |
 | Archive | `archive/` | Earlier intermediate exports — kept for history, not used by the live pages. |
 
 ---
 
-## Redesign Process
+## Proses Redesign
 
-### 1. 17 UI/UX Principles Analysis
+### 1. Analisis 17 Prinsip UI/UX
 
-The original [hosanna1.com](https://hosanna1.com) was analyzed against 17 UI/UX principles to identify design weaknesses:
+Website asli [hosanna1.com](https://hosanna1.com) dianalisis berdasarkan 17 prinsip UI/UX untuk mengidentifikasi kelemahan desain:
 
-| Principle | Issue on Original Site |
-|-----------|------------------------|
-| **Visibility of system status** | No active page indicator |
-| **Match between system and real world** | Technical language, not human-friendly |
-| **User control and freedom** | Complex navigation, hard to go back |
-| **Consistency and standards** | Inconsistent design across pages |
-| **Error prevention** | No form validation |
-| **Recognition rather than recall** | Scattered information, requires memorization |
-| **Flexibility and efficiency of use** | No shortcuts or quick access |
-| **Aesthetic and minimalist design** | Too many elements, not focused |
-| **Help users recognize, diagnose, and recover from errors** | No clear error messages |
-| **Help and documentation** | No user guide |
+| No | Prinsip | Penjelasan |
+| --- | --- | --- |
+| 1 | **User Compatibility** | Sesuai dengan kebutuhan user (warna, ukuran, keterbacaan, font) |
+| 2 | **Product Compatibility** | Desain produk sesuai dengan tujuan pembuatannya |
+| 3 | **Task Compatibility** | Desain mendukung pelaksanaan tugas yang diemban |
+| 4 | **Workflow Compatibility** | Sesuai dengan alur/urutan kerja |
+| 5 | **Simplicity** | Desain sederhana dan membantu user menyelesaikan task |
+| 6 | **Consistency** | Konsistensi dalam konsep desain |
+| 7 | **Familiarity** | Desain mendekati kelaziman yang telah diterima masyarakat |
+| 8 | **Flexibility** | Fleksibel dalam melayani berbagai variasi kebutuhan user |
+| 9 | **Responsiveness** | Daya tanggap terhadap input user |
+| 10 | **Control** | Menyediakan kendali proses untuk mencegah kesalahan |
+| 11 | **Robustness** | Kehandalan dalam menangani kemacetan system atau kesalahan user |
+| 12 | **Protection** | Sistem memberi user rasa nyaman walaupun telah melakukan kesalahan |
+| 13 | **WYSIWYG** | What You See Is What You Get — tampilan saat editing sama dengan output |
+| 14 | **Direct Manipulation** | Menyediakan tool untuk aksi-reaksi, customisasi, atau manipulasi |
+| 15 | **Invisible Technology** | Tampilkan fungsionalitasnya, tutupi kerumitan teknologi |
+| 16 | **Ease of Learning** | Kemudahan untuk dipelajari dalam waktu relatif singkat |
+| 17 | **Ease of Use** | Kemudahan untuk digunakan |
 
-### 2. User Persona (3 People)
+### 2. User Persona (3 Orang)
 
-| Persona | Description |
-|---------|-------------|
-| **Potential Buyer** | Looking for a quality Afghan Hound to keep as a pet |
-| **Dog Lover** | Wants to adopt or simply browse the collection |
-| **Researcher/Breeder** | Seeking information about lineage and breeder reputation |
+| Persona | Deskripsi |
+|---------|-----------|
+| **Calon Pembeli** | Mencari anjing Afghan Hound berkualitas untuk dipelihara |
+| **Pecinta Anjing** | Ingin adopsi atau sekadar melihat koleksi anjing |
+| **Peneliti/Breeder** | Mencari informasi tentang garis keturunan dan reputasi peternak |
 
 ### 3. Empathy Map Canvas (EMC)
 
-Each persona was analyzed for:
-- **Think & Feel:** What are they thinking and feeling?
-- **See:** What do they see around them?
-- **Hear:** What do they hear from others?
-- **Say & Do:** What do they say and do?
-- **Pain:** What frustrates them?
-- **Gain:** What do they hope for?
+Tiap persona dianalisis perasaannya:
+- **Think & Feel:** Apa yang dipikirkan dan dirasakan?
+- **See:** Apa yang dilihat di sekitarnya?
+- **Hear:** Apa yang didengar dari orang lain?
+- **Say & Do:** Apa yang dilakukan dan dikatakan?
+- **Pain:** Apa yang membuat frustasi?
+- **Gain:** Apa yang diharapkan?
 
 ### 4. Customer Journey Map (CJM)
 
-User journey from start to finish:
+Perjalanan pengguna dari awal sampai akhir:
 
 ```
 Aware → Consider → Contact → Adopt → After Care
@@ -124,25 +135,24 @@ Search    Collection Form      Dog       Up
 
 ### 5. Problem Statement
 
-Based on the 17-principle analysis, the **high-priority issue** that became the basis for redesign:
+Berdasarkan analisis 17 prinsip, masalah **prioritas tinggi** yang menjadi dasar redesign:
 
-> **The original website is not mobile-friendly, has complex navigation, and fails to build trust.**
-> Users struggle to find contact information, view the dog collection, and understand
-> the adoption/purchase process.
+> **Website asli tidak mobile-friendly, navigasi rumit, dan tidak membangun kepercayaan.**
+> Pengguna kesulitan menemukan informasi kontak, melihat koleksi anjing, dan memahami
+> proses adopsi/pembelian.
 
 ---
 
 ## Design Approach
 
-The redesign focuses on simplicity and trust:
+Redesign berfokus pada kesederhanaan dan kepercayaan:
 
-- **Kept the real identity** — AKC registered, champion-sired hounds for show or pet, breeding online since 1998, the kennel's own Psalm 23 motto (*"I will fear no evil"*), and the real contact email.
-- **Simplified the journey** — one clear inquiry path instead of several scattered forms; a single-step contact form instead of a multi-step flow.
-- **Plain, human copy** — written the way a small family kennel actually speaks, not marketing filler.
-- **A reusable design system** — navy / gold / off-white palette, an 8px spacing rhythm, and a Playfair Display + Inter type pairing, all defined as CSS tokens in `hi-fi/styles.css`.
+- **Mempertahankan identitas asli** — AKC registered, champion-sired hounds, breeding online sejak 1998, motto Psalm 23, dan email kontak asli.
+- **Menyederhanakan perjalanan** — satu jalur kontak yang jelas, formulir satu langkah.
+- **Bahasa manusia** — ditulis seperti keluarga peternak bicara, bukan bahasa marketing.
+- **Design system** — palet navy/gold/off-white, spacing 8px, font Playfair Display + Inter.
 
-> Dog names, photos, and litter details in the prototype are **illustrative placeholders** —
-> meant to show the layout, ready to be swapped for the kennel's real content.
+> Nama anjing, foto, dan detail litter dalam prototipe adalah **placeholder** — siap diganti dengan konten asli.
 
 ---
 

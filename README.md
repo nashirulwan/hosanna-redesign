@@ -1,16 +1,18 @@
 # Hosanna Afghan Hounds — Concept Redesign
 
-An **unofficial concept redesign** of [hosanna1.com](https://hosanna1.com), a long-running
-Afghan Hound breeder website that still carries its original late-1990s look. This project
-reimagines it as a calm, modern, mobile-friendly site — from low-fidelity wireframes through
-to a high-fidelity, interactive prototype.
+Final project for **Human-Computer Interaction (IMK)** course — a redesign of [hosanna1.com](https://hosanna1.com), an Afghan Hound breeder website that has been running since 1998 with a late-1990s design.
+
+This redesign is based on an analysis of **17 UI/UX principles** and includes:
+
+1. **User Persona** — 3 user personas (potential buyer, dog lover, researcher/breeder)
+2. **Empathy Map Canvas (EMC)** — feelings, thoughts, behaviors, and pain points for each persona
+3. **Customer Journey Map (CJM)** — user journey from aware → consider → adopt → after care
+4. **Problem Statement** — high-priority issues that became the basis for redesign
 
 > ⚠️ **Disclaimer** — This is an independent design study for portfolio purposes. It is **not
 > affiliated with, commissioned by, or endorsed by** Hosanna Afghan Hounds. All brand
 > references remain the property of their owner. The original site lives at
 > [hosanna1.com](https://hosanna1.com).
-
-Designed & built by [**@nashirulwan**](https://github.com/nashirulwan).
 
 🔗 **Live demo:** https://nashirulwan.github.io/hosanna-redesign/
 
@@ -20,7 +22,9 @@ Designed & built by [**@nashirulwan**](https://github.com/nashirulwan).
 
 | Original (1998-era) | Redesign concept |
 | --- | --- |
-| ![Original site](docs/before-original-site.png) | [**View the live demo →**](https://nashirulwan.github.io/hosanna-redesign/)<br>_(screenshot: `docs/after-redesign.png`)_ |
+| ![Original site](docs/before-original-site.png) | ![Redesign](docs/after-redesign.png) |
+
+> See the [live demo](https://nashirulwan.github.io/hosanna-redesign/) or check `docs/after-redesign.png`.
 
 ---
 
@@ -35,23 +39,80 @@ Designed & built by [**@nashirulwan**](https://github.com/nashirulwan).
 | Reference | `docs/` | Screenshot of the original site. |
 | Archive | `archive/` | Earlier intermediate exports — kept for history, not used by the live pages. |
 
-## Design approach
+---
 
-The goal was the simplest, most trustworthy version of a small breeder's site, while keeping
-everything **factually true to the original**:
+## Redesign Process
 
-- **Kept the real identity** — AKC registered, champion-sired hounds for show or pet, breeding
-  online since 1998, the kennel's own Psalm 23 motto (*"I will fear no evil"*), and the real
-  contact email.
-- **Simplified the journey** — one clear inquiry path instead of several scattered forms; a
-  single-step contact form instead of a multi-step flow.
-- **Plain, human copy** — written the way a small family kennel actually speaks, not marketing
-  filler.
-- **A reusable design system** — navy / gold / off-white palette, an 8px spacing rhythm, and a
-  Playfair Display + Inter type pairing, all defined as CSS tokens in `hi-fi/styles.css`.
+### 1. 17 UI/UX Principles Analysis
+
+The original [hosanna1.com](https://hosanna1.com) was analyzed against 17 UI/UX principles to identify design weaknesses:
+
+| Principle | Issue on Original Site |
+|-----------|------------------------|
+| **Visibility of system status** | No active page indicator |
+| **Match between system and real world** | Technical language, not human-friendly |
+| **User control and freedom** | Complex navigation, hard to go back |
+| **Consistency and standards** | Inconsistent design across pages |
+| **Error prevention** | No form validation |
+| **Recognition rather than recall** | Scattered information, requires memorization |
+| **Flexibility and efficiency of use** | No shortcuts or quick access |
+| **Aesthetic and minimalist design** | Too many elements, not focused |
+| **Help users recognize, diagnose, and recover from errors** | No clear error messages |
+| **Help and documentation** | No user guide |
+
+### 2. User Persona (3 People)
+
+| Persona | Description |
+|---------|-------------|
+| **Potential Buyer** | Looking for a quality Afghan Hound to keep as a pet |
+| **Dog Lover** | Wants to adopt or simply browse the collection |
+| **Researcher/Breeder** | Seeking information about lineage and breeder reputation |
+
+### 3. Empathy Map Canvas (EMC)
+
+Each persona was analyzed for:
+- **Think & Feel:** What are they thinking and feeling?
+- **See:** What do they see around them?
+- **Hear:** What do they hear from others?
+- **Say & Do:** What do they say and do?
+- **Pain:** What frustrates them?
+- **Gain:** What do they hope for?
+
+### 4. Customer Journey Map (CJM)
+
+User journey from start to finish:
+
+```
+Aware → Consider → Contact → Adopt → After Care
+  │         │          │         │         │
+  ▼         ▼          ▼         ▼         ▼
+Google    Browse     Submit    Receive   Follow
+Search    Collection Form      Dog       Up
+```
+
+### 5. Problem Statement
+
+Based on the 17-principle analysis, the **high-priority issue** that became the basis for redesign:
+
+> **The original website is not mobile-friendly, has complex navigation, and fails to build trust.**
+> Users struggle to find contact information, view the dog collection, and understand
+> the adoption/purchase process.
+
+---
+
+## Design Approach
+
+The redesign focuses on simplicity and trust:
+
+- **Kept the real identity** — AKC registered, champion-sired hounds for show or pet, breeding online since 1998, the kennel's own Psalm 23 motto (*"I will fear no evil"*), and the real contact email.
+- **Simplified the journey** — one clear inquiry path instead of several scattered forms; a single-step contact form instead of a multi-step flow.
+- **Plain, human copy** — written the way a small family kennel actually speaks, not marketing filler.
+- **A reusable design system** — navy / gold / off-white palette, an 8px spacing rhythm, and a Playfair Display + Inter type pairing, all defined as CSS tokens in `hi-fi/styles.css`.
 
 > Dog names, photos, and litter details in the prototype are **illustrative placeholders** —
 > meant to show the layout, ready to be swapped for the kennel's real content.
+
+---
 
 ## Tech
 
@@ -60,6 +121,8 @@ No build step. Everything runs straight in the browser:
 - **React 18** + **Babel Standalone** (loaded from CDN)
 - Plain **CSS** with custom properties (design tokens)
 - Fonts via Google Fonts
+
+---
 
 ## Run it locally
 
@@ -74,10 +137,3 @@ Then open:
 
 (Any static file server works — the pages just need to be served over HTTP, not opened as
 `file://`, because they fetch the `.jsx` sources.)
-
-## Credits
-
-- Original site & brand: Hosanna Afghan Hounds — [hosanna1.com](https://hosanna1.com)
-- Redesign concept, UI & build: [@nashirulwan](https://github.com/nashirulwan)
-- Fonts: [Playfair Display](https://fonts.google.com/specimen/Playfair+Display) &
-  [Inter](https://fonts.google.com/specimen/Inter)

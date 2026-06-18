@@ -63,6 +63,17 @@ The redesign started with low-fidelity wireframes to explore multiple layout dir
 
 ---
 
+
+---
+
+## Mobile Views
+
+| Home | Dogs | Profile | Contact |
+| --- | --- | --- | --- |
+| <img src="docs/Home_mobile.png" width="200"> | <img src="docs/Dogs.png" width="200"> | <img src="docs/Profile.png" width="200"> | <img src="docs/Contact.png" width="200"> |
+
+> All pages are fully responsive. These screenshots show the mobile experience at 1125x2160 (iPhone).
+
 ## What's in here
 
 | Stage | File | What's inside |

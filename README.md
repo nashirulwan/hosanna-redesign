@@ -1,18 +1,17 @@
-# Hosanna Afghan Hounds — Concept Redesign
+# Hosanna Afghan Hounds - Concept Redesign
 
-Final project for **Human-Computer Interaction (IMK)** course — a redesign of [hosanna1.com](https://hosanna1.com), an Afghan Hound breeder website that has been running since 1998 with a late-1990s design.
+My concept redesign of [hosanna1.com](https://hosanna1.com), an Afghan Hound breeder website running since 1998. Built as my final project for the **Human-Computer Interaction (IMK)** course.
 
-This redesign is based on an analysis of **17 UI/UX principles** and includes:
+What's in here:
 
-1. **User Persona** — 3 user personas (potential buyer, dog lover, researcher/breeder)
-2. **Empathy Map Canvas (EMC)** — feelings, thoughts, behaviors, and pain points for each persona
-3. **Customer Journey Map (CJM)** — user journey from aware → consider → adopt → after care
-4. **Problem Statement** — high-priority issues that became the basis for redesign
+1. **User Persona** - 3 personas: a first-time buyer, a seasoned dog lover, and a researcher
+2. **Empathy Map Canvas (EMC)** - what each persona thinks, feels, sees, and struggles with
+3. **Customer Journey Map (CJM)** - the full journey from first click to after care
+4. **Problem Statement** - the key issues that shaped the redesign
 
-> ⚠️ **Disclaimer** — This is an independent design study for portfolio purposes. It is **not
-> affiliated with, commissioned by, or endorsed by** Hosanna Afghan Hounds. All brand
-> references remain the property of their owner. The original site lives at
-> [hosanna1.com](https://hosanna1.com).
+> ⚠️ **Disclaimer** - This is an independent design study for my portfolio. **Not affiliated with,
+> commissioned by, or endorsed by** Hosanna Afghan Hounds. All brand references remain
+> the property of their owner. Original site: [hosanna1.com](https://hosanna1.com).
 
 ---
 
@@ -36,7 +35,7 @@ The redesign started with low-fidelity wireframes to explore multiple layout dir
 | --- | --- | --- | --- |
 | <img src="docs/A _ Editorial.png" width="400"> | <img src="docs/B _ Photo mosaic.png" width="400"> | <img src="docs/C _ Story split.png" width="400"> | <img src="docs/D _ Bold type.png" width="400"> |
 
-> Each direction uses the same content but with a very different visual posture — from editorial to photo-driven to type-focused.
+> Each direction uses the same content but with a very different visual posture, from editorial to photo-driven to type-focused.
 
 ### Available Dogs
 
@@ -66,64 +65,64 @@ The redesign started with low-fidelity wireframes to explore multiple layout dir
 
 ## What's in here
 
-| Stage | File | What it is |
+| Stage | File | What's inside |
 | --- | --- | --- |
-| **Hi-fi prototype** | [`index.html`](index.html) | The final interactive redesign — Home, Available Dogs, Dog Profile, Contact. |
+| **Hi-fi prototype** | [`index.html`](index.html) | The final interactive redesign, Home, Available Dogs, Dog Profile, Contact. |
 | **Wireframes** | [`wireframes.html`](wireframes.html) | Low-fidelity exploration: layout directions, design tokens, mobile sketches. |
 | Hi-fi source | `hi-fi/` | Components, page code, CSS design tokens, sample data. |
 | Wireframe source | `wireframes/` | The sketch-style component library and page variants. |
 | Reference | `docs/` | Screenshots of the original site, wireframes, and hi-fi redesign. |
-| Archive | `archive/` | Earlier intermediate exports — kept for history, not used by the live pages. |
+| Archive | `archive/` | Earlier intermediate exports, kept for history, not used by the live pages. |
 
 ---
 
-## Proses Redesign
+## Redesign Process
 
-### 1. Analisis 17 Prinsip UI/UX
+### 1. 17 UI/UX Principles Analysis
 
-Website asli [hosanna1.com](https://hosanna1.com) dianalisis berdasarkan 17 prinsip UI/UX untuk mengidentifikasi kelemahan desain:
+I ran the original [hosanna1.com](https://hosanna1.com) through 17 UI/UX principles to spot what wasn't working:
 
-| No | Prinsip | Penjelasan |
+| No | Principle | Description |
 | --- | --- | --- |
-| 1 | **User Compatibility** | Sesuai dengan kebutuhan user (warna, ukuran, keterbacaan, font) |
-| 2 | **Product Compatibility** | Desain produk sesuai dengan tujuan pembuatannya |
-| 3 | **Task Compatibility** | Desain mendukung pelaksanaan tugas yang diemban |
-| 4 | **Workflow Compatibility** | Sesuai dengan alur/urutan kerja |
-| 5 | **Simplicity** | Desain sederhana dan membantu user menyelesaikan task |
-| 6 | **Consistency** | Konsistensi dalam konsep desain |
-| 7 | **Familiarity** | Desain mendekati kelaziman yang telah diterima masyarakat |
-| 8 | **Flexibility** | Fleksibel dalam melayani berbagai variasi kebutuhan user |
-| 9 | **Responsiveness** | Daya tanggap terhadap input user |
-| 10 | **Control** | Menyediakan kendali proses untuk mencegah kesalahan |
-| 11 | **Robustness** | Kehandalan dalam menangani kemacetan system atau kesalahan user |
-| 12 | **Protection** | Sistem memberi user rasa nyaman walaupun telah melakukan kesalahan |
-| 13 | **WYSIWYG** | What You See Is What You Get — tampilan saat editing sama dengan output |
-| 14 | **Direct Manipulation** | Menyediakan tool untuk aksi-reaksi, customisasi, atau manipulasi |
-| 15 | **Invisible Technology** | Tampilkan fungsionalitasnya, tutupi kerumitan teknologi |
-| 16 | **Ease of Learning** | Kemudahan untuk dipelajari dalam waktu relatif singkat |
-| 17 | **Ease of Use** | Kemudahan untuk digunakan |
+| 1 | **User Compatibility** | Fits what users need, colors, sizing, readability, fonts |
+| 2 | **Product Compatibility** | The design matches what the product is meant to do |
+| 3 | **Task Compatibility** | Helps users get their tasks done |
+| 4 | **Workflow Compatibility** | Matches how people naturally work |
+| 5 | **Simplicity** | Simple and straightforward |
+| 6 | **Consistency** | Same look and feel across the product |
+| 7 | **Familiarity** | Follows patterns users already know |
+| 8 | **Flexibility** | Works for different types of users |
+| 9 | **Responsiveness** | Quick to react to what users do |
+| 10 | **Control** | Built-in safeguards to catch mistakes early |
+| 11 | **Robustness** | Handles errors and edge cases gracefully |
+| 12 | **Protection** | Users feel safe even when things go wrong |
+| 13 | **WYSIWYG** | What You See Is What You Get, what you edit is what you get |
+| 14 | **Direct Manipulation** | Direct tools for interaction and customization |
+| 15 | **Invisible Technology** | The tech stays out of the way |
+| 16 | **Ease of Learning** | Quick to pick up |
+| 17 | **Ease of Use** | Simple to use |
 
-### 2. User Persona (3 Orang)
+### 2. User Personas
 
-| Persona | Deskripsi |
-|---------|-----------|
-| **Calon Pembeli** | Mencari anjing Afghan Hound berkualitas untuk dipelihara |
-| **Pecinta Anjing** | Ingin adopsi atau sekadar melihat koleksi anjing |
-| **Peneliti/Breeder** | Mencari informasi tentang garis keturunan dan reputasi peternak |
+| Persona | Who they are |
+|---------|-------------|
+| **Prospective Buyer** | First-timer looking for a quality Afghan Hound |
+| **Dog Lover** | Already has dogs, wants to browse and compare bloodlines |
+| **Researcher/Breeder** | Needs structured data on bloodlines for academic work |
 
 ### 3. Empathy Map Canvas (EMC)
 
-Tiap persona dianalisis perasaannya:
-- **Think & Feel:** Apa yang dipikirkan dan dirasakan?
-- **See:** Apa yang dilihat di sekitarnya?
-- **Hear:** Apa yang didengar dari orang lain?
-- **Say & Do:** Apa yang dilakukan dan dikatakan?
-- **Pain:** Apa yang membuat frustasi?
-- **Gain:** Apa yang diharapkan?
+For each persona, I mapped out six dimensions:
+- **Think & Feel:** What are they thinking and feeling?
+- **See:** What do they see around them?
+- **Hear:** What do they hear from others?
+- **Say & Do:** What do they say and do?
+- **Pain:** What frustrates them?
+- **Gain:** What do they hope for?
 
 ### 4. Customer Journey Map (CJM)
 
-Perjalanan pengguna dari awal sampai akhir:
+The full user journey:
 
 ```
 Aware → Consider → Contact → Adopt → After Care
@@ -135,34 +134,34 @@ Search    Collection Form      Dog       Up
 
 ### 5. Problem Statement
 
-Berdasarkan analisis 17 prinsip, masalah **prioritas tinggi** yang menjadi dasar redesign:
+From the analysis, here's what mattered most:
 
-> **Website asli tidak mobile-friendly, navigasi rumit, dan tidak membangun kepercayaan.**
-> Pengguna kesulitan menemukan informasi kontak, melihat koleksi anjing, dan memahami
-> proses adopsi/pembelian.
+> **The original website is not mobile-friendly, has complex navigation, and fails to build trust.**
+> Users struggle to find contact information, view the dog collection, and understand
+> the adoption/purchase process.
 
 ---
 
 ## Design Approach
 
-Redesign berfokus pada kesederhanaan dan kepercayaan:
+I kept it simple and trustworthy:
 
-- **Mempertahankan identitas asli** — AKC registered, champion-sired hounds, breeding online sejak 1998, motto Psalm 23, dan email kontak asli.
-- **Menyederhanakan perjalanan** — satu jalur kontak yang jelas, formulir satu langkah.
-- **Bahasa manusia** — ditulis seperti keluarga peternak bicara, bukan bahasa marketing.
-- **Design system** — palet navy/gold/off-white, spacing 8px, font Playfair Display + Inter.
+- **Kept the original identity**, AKC registered, champion-sired hounds, breeding since 1998, Psalm 23 motto, and the real contact email
+- **One clear path**, single contact flow, one-step form
+- **Human tone**, sounds like a breeder family talking, not a marketing team
+- **Design system**, navy/gold/off-white palette, 8px spacing, Playfair Display + Inter fonts
 
-> Nama anjing, foto, dan detail litter dalam prototipe adalah **placeholder** — siap diganti dengan konten asli.
+> Dog names, photos, and litter details in the prototype are **placeholders**, ready to swap in real content.
 
 ---
 
 ## Tech
 
-No build step. Everything runs straight in the browser:
+No build step needed, everything runs straight in the browser:
 
-- **React 18** + **Babel Standalone** (loaded from CDN)
-- Plain **CSS** with custom properties (design tokens)
-- Fonts via Google Fonts
+- **React 18** + **Babel Standalone** (via CDN)
+- Plain **CSS** with custom properties
+- Fonts from Google Fonts
 
 ---
 
@@ -177,5 +176,4 @@ Then open:
 - **Hi-fi redesign** → http://localhost:3000/index.html
 - **Wireframes** → http://localhost:3000/wireframes.html
 
-(Any static file server works — the pages just need to be served over HTTP, not opened as
-`file://`, because they fetch the `.jsx` sources.)
+(Any static file server works, just serve over HTTP, not `file://`, since it fetches `.jsx` sources.)

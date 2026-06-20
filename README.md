@@ -1,4 +1,4 @@
-# Hosanna Afghan Hounds - Concept Redesign
+### Hosanna Afghan Hounds - Concept Redesign
 
 My concept redesign of [hosanna1.com](https://hosanna1.com), an Afghan Hound breeder website running since 1998. Built as my final project for the **Human-Computer Interaction (IMK)** course.
 
@@ -15,7 +15,7 @@ What's in here:
 
 ---
 
-## Before → After
+#### Before → After
 
 | Original (1998-era) | Redesign concept |
 | --- | --- |
@@ -25,11 +25,11 @@ What's in here:
 
 ---
 
-## Wireframes
+#### Wireframes
 
 The redesign started with low-fidelity wireframes to explore multiple layout directions before committing to a final design.
 
-### Homepage Directions (4 Concepts)
+##### Homepage Directions (4 Concepts)
 
 | A - Editorial | B - Photo Mosaic | C - Story Split | D - Bold Type |
 | --- | --- | --- | --- |
@@ -37,7 +37,7 @@ The redesign started with low-fidelity wireframes to explore multiple layout dir
 
 > Each direction uses the same content but with a very different visual posture, from editorial to photo-driven to type-focused.
 
-### Available Dogs
+##### Available Dogs
 
 | A - Filtered Grid | B - Empty + Waitlist |
 | --- | --- |
@@ -45,7 +45,7 @@ The redesign started with low-fidelity wireframes to explore multiple layout dir
 
 > Filterable grid for browsing dogs, plus empty state with waitlist signup.
 
-### Dog Profile
+##### Dog Profile
 
 | A - Two-Column Classic | B - Editorial Full-Bleed |
 | --- | --- |
@@ -53,7 +53,7 @@ The redesign started with low-fidelity wireframes to explore multiple layout dir
 
 > Two layout options: structured two-column vs full-bleed editorial.
 
-### Contact
+##### Contact
 
 | A - Form + Kennel Info | B - Review Step |
 | --- | --- |
@@ -66,7 +66,7 @@ The redesign started with low-fidelity wireframes to explore multiple layout dir
 
 ---
 
-## Mobile Views
+#### Mobile Views
 
 | Home | Dogs | Profile | Contact |
 | --- | --- | --- | --- |
@@ -74,7 +74,7 @@ The redesign started with low-fidelity wireframes to explore multiple layout dir
 
 > All pages are fully responsive. These screenshots show the mobile experience at 1125x2160 (iPhone).
 
-## What's in here
+#### What's in here
 
 | Stage | File | What's inside |
 | --- | --- | --- |
@@ -87,9 +87,9 @@ The redesign started with low-fidelity wireframes to explore multiple layout dir
 
 ---
 
-## Redesign Process
+#### Redesign Process
 
-### 1. 17 UI/UX Principles Analysis
+##### 1. 17 UI/UX Principles Analysis
 
 I ran the original [hosanna1.com](https://hosanna1.com) through 17 UI/UX principles to spot what wasn't working:
 
@@ -113,7 +113,7 @@ I ran the original [hosanna1.com](https://hosanna1.com) through 17 UI/UX princip
 | 16 | **Ease of Learning** | Quick to pick up |
 | 17 | **Ease of Use** | Simple to use |
 
-### 2. User Personas
+##### 2. User Personas
 
 | Persona | Who they are |
 |---------|-------------|
@@ -121,7 +121,7 @@ I ran the original [hosanna1.com](https://hosanna1.com) through 17 UI/UX princip
 | **Dog Lover** | Already has dogs, wants to browse and compare bloodlines |
 | **Researcher/Breeder** | Needs structured data on bloodlines for academic work |
 
-### 3. Empathy Map Canvas (EMC)
+##### 3. Empathy Map Canvas (EMC)
 
 For each persona, I mapped out six dimensions:
 - **Think & Feel:** What are they thinking and feeling?
@@ -131,7 +131,7 @@ For each persona, I mapped out six dimensions:
 - **Pain:** What frustrates them?
 - **Gain:** What do they hope for?
 
-### 4. Customer Journey Map (CJM)
+##### 4. Customer Journey Map (CJM)
 
 The full user journey:
 
@@ -143,7 +143,7 @@ Google    Browse     Submit    Receive   Follow
 Search    Collection Form      Dog       Up
 ```
 
-### 5. Problem Statement
+##### 5. Problem Statement
 
 From the analysis, here's what mattered most:
 
@@ -153,7 +153,7 @@ From the analysis, here's what mattered most:
 
 ---
 
-## Design Approach
+#### Design Approach
 
 I kept it simple and trustworthy:
 
@@ -166,7 +166,7 @@ I kept it simple and trustworthy:
 
 ---
 
-## Tech
+#### Tech
 
 No build step needed, everything runs straight in the browser:
 
@@ -176,7 +176,7 @@ No build step needed, everything runs straight in the browser:
 
 ---
 
-## Run it locally
+#### Run it locally
 
 ```bash
 npx serve .
@@ -188,3 +188,7 @@ Then open:
 - **Wireframes** → http://localhost:3000/wireframes.html
 
 (Any static file server works, just serve over HTTP, not `file://`, since it fetches `.jsx` sources.)
+
+#### License
+
+MIT, see LICENSE.
